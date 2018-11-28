@@ -17,6 +17,7 @@ var tried = []; //tried MUST BE array, for push letters behind!!!!!!!!!!!!!!!!!!
 // Creates an array that lists out all of the options
 var computertype = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var computerGuess = computertype[Math.floor(Math.random() * computertype.length)].toUpperCase(); //random pick up number!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+console.log (computerGuess)
 
 // This function is run whenever the user presses a key.
 document.onkeydown = function (event) {
@@ -33,10 +34,8 @@ document.onkeydown = function (event) {
     wins++;
     tried = []; //reset
     computerGuess = computertype[Math.floor(Math.random() * computertype.length)].toUpperCase();
-    console.log (computerGuess)
   } else if (userGuess !== computerGuess) {
     left--;
-    console.log (computerGuess)
   }
 
   if (left === 0) {
@@ -45,6 +44,7 @@ document.onkeydown = function (event) {
     left = 9; //reset
     computerGuess = computertype[Math.floor(Math.random() * computertype.length)].toUpperCase();
   }
+  console.log (computerGuess)
 
 
   // Change the guide words
